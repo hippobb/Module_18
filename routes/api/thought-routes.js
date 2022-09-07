@@ -6,6 +6,7 @@ const {
   removeReaction,
   getAllThought,
   getOneThought,
+  editThought,
 } = require('../../controllers/thought-controller');
 
 router  
@@ -14,7 +15,8 @@ router
 
 router  
   .route('/:thoughtId')
-  .get(getOneThought);
+  .get(getOneThought)
+  .put(editThought);
 
 // /api/thoughts/<userId>
 router
